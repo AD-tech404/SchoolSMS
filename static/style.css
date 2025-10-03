@@ -1,0 +1,242 @@
+/* -------------INDEX.HTML start-------------- */
+/* dropdown clases start */
+.index-body{
+    background:#121212;
+}
+.choosedb{
+    margin:auto;  
+    display:flex;
+    width:100%;
+    justify-content:center;
+    position: relative;
+    top:0px;
+}
+.submitdatabase{
+    margin:auto;
+    position:relative;
+    width:90%;
+    left:80px;
+    top:5px;
+}
+.dropdownSearch{
+    margin:auto;
+    width:100%;
+}
+#databaselist{
+    margin:auto;
+    height:300px;
+}
+.container1{
+    background:red;
+    font-color:white;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    top:20px;
+}
+/* dropdown classes ends */
+/* -------------INDEX.HTML start-------------- */
+/* -------------CLASS DASHBORD start-------------- */
+/* students information */
+.*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    margin:0px;
+    padding:0px;
+}
+.flash-container{
+    position:fixed;
+    width:100%;
+    top:50px;
+    z-index:10000;
+}
+/* navbar start */
+.navbar{
+    display:flex;
+    margin:0px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    width:100%;
+    height:60px;
+    background: black;
+    justify-content:center;
+    place-item:center;
+}
+.logo{
+    display:flex;
+    margin:5px;
+    padding:5px;
+    justify-content:left;
+    place-item:center;
+}
+.tab{
+    display:flex;
+    margin:5px;
+    padding:5px;
+    margin-left:auto;
+
+}
+/* navbar ends */
+.container {
+    width:100%;
+    height:100%;
+    background:#e4e4e4;
+    margin:auto;
+    position:relative;
+    top:100px;
+
+}
+.containerform{
+    background:#000000;
+}
+.p-3{
+    background:#9550c3;
+}
+.studentsadd{
+    border: 2px solid black;
+    border-radius:5px;
+    background:#00ffff;
+    padding:5px;
+}
+.rollno{
+    border: 3px solid black;
+    border-radius:5px;
+    border-color:purple;
+    margin:2px;
+}
+.studentsname{
+    border: 3px solid black;
+    border-radius:5px;
+    border-color:purple;
+    margin:2px;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+
+}
+table {
+    width:100%;
+    margin:auto;
+    overflow-y:auto;
+
+}
+th, td {
+    padding:10px;
+    text-align: center;
+    margin:5px;
+}
+th{
+    background: #e2e2e2;
+}
+td{
+    background:#ffffff;
+}
+form {
+    margin-bottom: 20px;
+}
+.updatebtn{
+    border: 1px solid black;
+    border-radius:5px;
+    background: #00ffea;
+    padding:5px;
+}
+.deletebtn{
+    border: 1px solid black;
+    border-radius:5px;
+    background:#ff000a;
+    padding:5px;
+}
+.studentsupdate{
+    width:100%;
+    margin:auto;
+    border: 2px solid black;
+    border-radius:5px;
+}
+#studentlist{
+    height:500px;
+}
+/* students information */
+/* -------------CLASS DASHBOARD ends-------------- */
+/* ---------------class1_attendence.html starts--------------- */
+.attendance-body{
+    backdrop-filter: blur(10px);
+    background: #e2e2e2;;
+}
+.attendance_container{
+    width:95%;
+    background:white;
+    height:100%;
+    margin:auto;
+    padding:2px;
+    position:relative;
+    top:100px;
+}
+.text1{
+    margin:auto;
+    font-size:20px;
+    font-weight:bold;
+    font-style:cursive;
+    color:#5e0cb0;
+}
+#attendencelist{
+    background:white;
+    margin:auto;
+    padding:0px;
+    width:90%;
+    height:400px;
+    border-radius:10px;
+    border: 5px double black;
+}
+#attendanceform{
+    height:300px;
+    margin:auto;
+    padding:0px;
+    width:90%;
+    border-radius:10px;
+    background:#000000;
+    display:flex;
+    justify-content:center;
+
+}
+.attendance-input{
+    margin:5px;
+    padding:5px;
+
+}
+.attendenceform-input{
+    background: #e2e2e2;
+    margin:auto;
+    width:100%;
+    height:40px;
+    display:flex;
+    justify-content:left;
+
+}
+.submitbtn{
+    width:100%;
+    margin:auto;
+    height:50px;
+    background: #00ffea;;
+    border-radius:10px;
+    font-size:30px
+
+
+}
+.todays_total{
+    width:300px;
+    height:50px;
+    margin:auto;
+    background:gray;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    place-items:center;
+    font-size:20px;
+    color:white;
+}
+/* ----------------class1_attendence.html ends---------------- */

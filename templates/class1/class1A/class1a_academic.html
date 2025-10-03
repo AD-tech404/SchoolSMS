@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="img/favicon.png">
+    <title>Page title</title>
+    <style>
+        /* body of the page ends */
+    .alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    opacity: 1;
+    animation: fadeout 10s forwards;
+    }
+    .alert-success { background: #d4edda; color: #155724; }
+    .alert-danger { background: #f8d7da; color: #721c24; }
+    .alert-warning { background: #fff3cd; color: #856404; }
+    .alert-info { background: #d1ecf1; color: #0c5460; }
+
+    @keyframes fadeout {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+    }
+    #academic_container{
+        width:95%;
+        background:mediumpurple;
+        height:100%;
+        border: 2px solid black;
+        margin:auto;
+        padding:2px;
+        position:relative;
+        top:100px;
+    }
+    </style>
+
+<body>
+
+
+<!------------------------Navbar start-------------------------->
+   <nav class="navbar fixed-top navbar-expand-lg py-lg-5 px-1 py-1">
+       <!-- logo start -->
+       <div class="logo text-white">
+           <h1>HELLO</h1>
+       </div>
+       <!-- logo ends -->
+       <!-- tab starts -->
+       <div class="tab">
+           <!-- item starts -->
+           <!-- item first starts -->
+           <div class="item">
+                   <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-1 py-1 text-center me-2 mb-2">Home
+                   </button>
+           </div>
+           <!-- item first ends -->
+           <!-- item second start -->
+              <div class="item">
+                  <form action="{{ url_for('class1a.attendance') }}" method="POST">
+                      <button type="submit" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-1 py-1 text-center me-2 mb-2">Attendance 
+                      </button>
+                  </form>
+              </div>
+              <!-- item second ends -->
+              <!-- item third start -->
+               <div class="item">
+                      <form action="{{ url_for('class1a.class1a_academic') }}" method="POST">
+                      <button type="submit" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-1 py-1 text-center me-2 mb-2">Academic 
+                      </button>
+                      </form>
+              </div>
+              <!-- item third ends -->
+<!-- item fourth start -->
+           <div class="item">
+               <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-1 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80" type="button">Info
+               <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+               </svg>
+               </button>
+               <!-- item fourth ends -->
+               <!-- drop-down start -->
+               <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                   <!-- drop-down list start-->
+                   <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                       <!-- child first start -->
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard
+                           </a>
+                       </li>
+                       <!-- child first ends -->
+                       <!-- child second starts -->
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings
+                           </a>
+                       </li>
+                       <!-- child second ends -->
+                       <!-- child third starts -->
+                       <li>
+                           <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings
+                           </a>
+                       </li>
+                       <!-- child third ends -->
+                       <!-- child fourth start -->
+                       <li>
+                               <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out
+                               </a>
+                        </li>
+                        <!-- child fourth ends -->
+                     </ul>
+                     <!-- drop-down list ends-->
+                </div>
+                <!-- drop-down ends-->
+           </div>
+           <!-- item ends -->
+       </div>
+       <!-- tab ends -->
+   </nav> 
+<!------------------------Navbar ends-------------------------->
+<!-------- Notification Badge start -------->
+    <div class="flash-container">
+          
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}   
+    </div>
+<!-------- Notification Badge ends -------->
+
+
+    
+<!-- Academic mage started-->
+<div id="academic_container">
+<h2>Exam Results Manager</h2>
+
+    <form method="POST">
+        <label>Select Exam:</label>
+        <select name="exam_type">
+            {% for exam in exam_types %}
+                <option value="{{ exam }}" {% if exam == selected_exam %}selected{% endif %}>{{ exam }}</option>
+            {% endfor %}
+        </select>
+        <button name="view_results">View Results</button>
+        <br><br>
+
+        <label>New Column Name:</label>
+        <input type="text" name="column_name">
+        <button name="add_column">Add Column</button>
+    </form>
+
+    {% if results %}
+    <h3>Results for {{ selected_exam }}</h3>
+    
+    <div style="width:99%; height: 100%; overflow: auto;">
+    <table border="1" cellpadding="5">
+        <tr>
+            {% for col in columns %}
+                <th>{{ col }}</th>
+            {% endfor %}
+            <th>Update</th>
+        </tr>
+        
+             {% for row in results %}
+        <tr>
+            <form method="POST">
+                <input type="hidden" name="exam_type" value="{{ selected_exam }}">
+                <input type="hidden" name="update_id" value="{{ row['rollno'] }}">
+                {% for col in columns %}
+                    <td><input type="text" name="{{ col }}" value="{{ row[col] }}"></td>
+                {% endfor %}
+                <td><button type="submit">Save</button></td>
+            </form>
+        </tr>
+        {% endfor %}   
+        
+    </table>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

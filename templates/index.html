@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>index</title>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+          <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+          <link rel="icon" href="applogo/logo.png">
+<head>
+<body class="index-body">
+   
+<!-----------------Database selection box ends------------------>
+<!-- Database selection dropdown start -->
+<div class="choosedb"> 
+    <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Choose Your Class
+    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+    </button>
+    <!-- Dropdown selection menu start -->
+    <div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow-sm dark:bg-gray-700">
+        <!-- dropdown searchbox start -->
+        <div class="p-3">
+            <label for="input-group-search" class="sr-only">Search
+            </label>
+            <div class="relative">
+                <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                </div>
+                <input type="text" id="input-group-search" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user">
+             </div>   
+         </div>
+         <!-- dropdown searchbox ends -->
+         <!-- dropdown list start -->
+         <ul class="h-48 px-3 pb-3 overflow-y-auto text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownSearchButton" id="databaselist">
+           
+             <!-- dropdown list 1 start -->
+             <li>
+                 <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                 <form method="POST" action="/submit">
+       <input id="default-radio-6" type="radio" value="class1" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                     <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 1
+                     </label>
+      <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit</button>
+                 </form>   
+                 </div>
+              </li>
+              <!-- dropdown list 1 ends -->
+                                                                                    <!-- dropdown list 2 start -->
+              <li>
+                 <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                 <form method="POST" action="/submit">
+       <input id="default-radio-6" type="radio" value="class2" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                     <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 2
+                     </label>
+      <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit</button>
+                 </form>   
+                 </div>
+              </li>
+              <!-- dropdown list 2 ends -->
+              <!-- dropdown list 3 start -->
+             <li>
+                 <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                     <form method="POST" action="/submit">
+                         <input id="default-radio-6" type="radio" value="class3" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                         <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 3
+                         </label>
+                         <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                         </button>
+                    </form>   
+                </div>
+            </li>
+            <!-- dropdown list 3 ends -->
+                                                                                   <!-- dropdown list 4 start -->
+             <li>
+                                                                                        <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                          <form method="POST" action="/submit">
+                                                                                              <input id="default-radio-6" type="radio" value="class4" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                              <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 4
+                                                                                              </label>
+                                                                                              <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                              </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                       <!-- dropdown list 4 ends -->
+                 <!-- dropdown list 5 start -->
+                <li>
+                                                                                         <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                           <form method="POST" action="/submit">
+                                                                                               <input id="default-radio-6" type="radio" value="class5" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                               <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 5
+                                                                                               </label>
+                                                                                               <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                               </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                        <!-- dropdown list 5 ends -->
+                <!-- dropdown list 6 start -->
+                 <li>
+                                                                                            <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                              <form method="POST" action="/submit">
+                                                                                                  <input id="default-radio-6" type="radio" value="class6" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                  <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 6
+                                                                                                  </label>
+                                                                                                  <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                  </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                           <!-- dropdown list 6 ends -->
+                    <!-- dropdown list 7 start -->
+                     <li>
+                                                                                              <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                  <form method="POST" action="/submit">
+                                                                                                      <input id="default-radio-6" type="radio" value="class7" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                      <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 7
+                                                                                                      </label>
+                                                                                                      <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                      </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                               <!-- dropdown list 7 ends -->
+                        <!-- dropdown list 8 start -->
+                         <li>
+                                                                                                    <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                      <form method="POST" action="/submit">
+                                                                                                          <input id="default-radio-6" type="radio" value="class8" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                          <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 8
+                                                                                                          </label>
+                                                                                                          <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                          </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                                   <!-- dropdown list 8 ends -->
+                            <!-- dropdown list 9 start -->
+                             <li>
+                                                                                                        <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                          <form method="POST" action="/submit">
+                                                                                                              <input id="default-radio-6" type="radio" value="class9" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                              <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 9
+                                                                                                              </label>
+                                                                                                              <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                              </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                                       <!-- dropdown list 9 ends -->
+                            <!-- dropdown list 10 start -->
+                             <li>
+                                                                                                        <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                          <form method="POST" action="/submit">
+                                                                                                              <input id="default-radio-6" type="radio" value="class10" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                              <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 10
+                                                                                                              </label>
+                                                                                                              <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                              </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                                       <!-- dropdown list 10 ends -->
+                            <!-- dropdown list 11 start -->
+                             <li>
+                                                                                                        <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                          <form method="POST" action="/submit">
+                                                                                                              <input id="default-radio-6" type="radio" value="class11" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                              <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 11
+                                                                                                              </label>
+                                                                                                              <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                              </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                                       <!-- dropdown list 11 ends -->
+                            <!-- dropdown list 12 start -->
+                             <li>
+                                                                                                        <div class="flex items-center p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
+                                                                                                          <form method="POST" action="/submit">
+                                                                                                              <input id="default-radio-6" type="radio" value="class12" name="class_name" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                                                                                              <label for="default-radio-6" class="w-full ms-2 text-sm font-medium text-gray-900 rounded-sm dark:text-gray-300">Database of class 12
+                                                                                                              </label>
+                                                                                                              <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 ">Submit
+                                                                                                              </button>                                                           </form>                                                            </div>                                                             </li>
+                                                                                                       <!-- dropdown list 12 ends -->
+         </ul>
+    </div>
+    <!-- Database selection menue start -->
+</div>
+<!-- Database selection dropdown start -->
+<!-----------------Database selection box ends------------------>
+<!-----------------index content start----------------->
+<div class="container1">
+    <h1>WELCOME TEACHER'S</h1>
+</div>
+<!-----------------index content ends------------------>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>    
+</body>
+</head>
+</html>

@@ -1,0 +1,1 @@
+from .app import class1a_bp

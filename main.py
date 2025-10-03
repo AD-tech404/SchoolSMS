@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
+from keep_alive import keep_alive
+
 from classes.class1.class1A import class1a_bp
 
 app = Flask(__name__)
@@ -19,7 +21,13 @@ def submit():
     else:
         return "Unknown module selected"
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+#if __name__ == '__main__':
+    #app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == "__main__":
+    from os import environ
+    app.run(
+        host="0.0.0.0",
+        port=int(environ.get("PORT", 5000))
+    )
 
     
